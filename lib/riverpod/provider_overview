@@ -1,0 +1,13 @@
+ChangeNotifier 
+
+- notifyListeners(); : data에 변동이 생겼을떄 해당 함수를 호출하면 ChangeNotifier 리슨하고 있는 모든 
+오브젝트들의 변동사항을 알려줌 
+
+- .addListener(a) 주의할점 : 자동으로 dispose 되지 않으므로 수동으로 해줘야 함 . removeListener(a) dispose 시키면 됨 
+
+
+ChangeNotifierProvider
+
+- ChangeNotifier instance 필요할 때 만듬 
+
+- provider.of<t> 변화가 있으면 리빌드 하고 ,provider.of<t>(context,listen:false) 하면 instance 를 엑세스만 하고 변화를 리슨하지 않음 (UI 변화 X)
